@@ -1,0 +1,36 @@
+server:
+  port: 8080
+  tomcat:
+    uri-encoding: utf-8
+spring:
+  profiles:
+    active: dev
+# Actuator\u76D1\u63A7\u7684\u7AEF\u53E3\u53F7\u4E0E\u4E0A\u4E0B\u6587\u8DEF\u5F84
+management:
+  server:
+    port: 9999
+    servlet:
+      context-path: /actuator
+  endpoints:
+    web:
+      base-path: /base
+      exposure:
+        # \u5728yml\u4E2D*\u53F7\u4E3A\u5173\u952E\u5B57\uFF0C\u9700\u8981\u5C06\u5176\u4F7F\u7528\u53CC\u5F15\u53F7\u5F15\u8D77\u6765"*"
+        include: '*'
+        #include: ['env', 'beans', 'mappings']
+        exclude: ['env', 'beans']
+# \u81EA\u5B9A\u4E49info\u4FE1\u606F
+info:
+  company:
+    name: abc
+    url: www.abc.com
+    addr: Beijing China
+  auth:
+    name: dlz
+    dep: develepment
+# \u4ECEpom.xml\u6587\u4EF6\u4E2D\u8BFB\u53D6\u54CD\u5E94\u503C
+  project:
+    groupid: @project.groupId@
+    artifactid: @project.artifactId@
+    version: @project.version@
+    name: @project.name@
