@@ -1,5 +1,6 @@
 package com.dlz.service.impl;
 
+import com.dlz.entity.Student;
 import com.dlz.service.ISomeService;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
@@ -18,5 +19,10 @@ public class ProdServiceImpl implements ISomeService {
     @Override
     public String send() {
         return "prod";
+    }
+
+    @Override
+    public void addStudent(Student student) {
+
     }
 }

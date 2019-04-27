@@ -1,5 +1,7 @@
 package com.dlz.service;
 
+import com.dlz.entity.Student;
+
 /**
  * <p> Package: com.dlz.service </p>
  * <p> Description: (用一句话描述该文件做什么) </p>
@@ -10,4 +12,5 @@ package com.dlz.service;
  */
 public interface ISomeService {
     String send();
+    void addStudent(Student student);
 }

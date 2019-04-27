@@ -1,5 +1,7 @@
 package com.dlz.service.impl;
 
+import com.dlz.dao.ISomeDao;
+import com.dlz.entity.Student;
 import com.dlz.service.ISomeService;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
@@ -15,8 +17,14 @@ import org.springframework.stereotype.Service;
 @Service
 @Profile("dev")
 public class DevSomServiceImpl implements ISomeService {
+    private ISomeDao someDao;
     @Override
     public String send() {
         return "dev";
+    }
+
+    @Override
+    public void addStudent(Student student) {
+        someDao.saveStudent(student);
     }
 }
