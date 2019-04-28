@@ -1,5 +1,7 @@
 package com.dlz.entity;
 
+import java.io.Serializable;
+
 /**
  * <p> Package: com.dlz.entity </p>
  * <p> Description: (用一句话描述该文件做什么) </p>
@@ -8,7 +10,9 @@ package com.dlz.entity;
  * @version 1.0
  * @date 2019/4/26 20:12
  */
-public class Student {
+public class Student implements Serializable {
+
+    private static final long serialVersionUID = -2662323376727606271L;
     private Integer id;
     private String name;
     private Integer age;

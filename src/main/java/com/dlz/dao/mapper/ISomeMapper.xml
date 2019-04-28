@@ -6,4 +6,10 @@
     <insert id="saveStudent">
         insert into student(name,age) values (#{name},#{age})
     </insert>
+    <select id="findStudentById" resultType="com.dlz.entity.Student">
+        select id,name,age from student where id = #{xxx}
+    </select>
+    <select id="findCount" resultType="int">
+        select count(id) from student
+    </select>
 </mapper>

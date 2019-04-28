@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
 
 /**
  * <p> Package: com.dlz.controller </p>
@@ -50,5 +49,27 @@ public class SomeController {
     @ResponseBody
     public Student student() {
         return student;
+    }
+
+    @RequestMapping("/findStudent")
+    @ResponseBody
+    public com.dlz.entity.Student findHandle(Integer id) {
+        return someSvice.findStudentById(id);
+    }
+    @RequestMapping("/findCount")
+    @ResponseBody
+    public Integer countHandle() {
+        return someSvice.findStudentsCount();
+    }
+
+    @ResponseBody
+    @RequestMapping("/first")
+    public String first() {
+        return "this is first";
+    }
+    @ResponseBody
+    @RequestMapping("second")
+    public String second() {
+        return "this is second";
     }
 }

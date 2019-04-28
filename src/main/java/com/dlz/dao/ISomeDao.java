@@ -14,4 +14,7 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface ISomeDao {
      int saveStudent(Student student);
+
+     Student findStudentById(Integer id);
+     Integer findCount();
 }

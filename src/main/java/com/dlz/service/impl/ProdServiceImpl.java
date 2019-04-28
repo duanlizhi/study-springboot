@@ -16,6 +16,27 @@ import org.springframework.stereotype.Service;
 @Service
 @Profile("prod")
 public class ProdServiceImpl implements ISomeService {
+    /**
+     * 查找学生
+     *
+     * @param id
+     * @return
+     */
+    @Override
+    public Student findStudentById(Integer id) {
+        return null;
+    }
+
+    /**
+     * 查找学生总人数
+     *
+     * @return
+     */
+    @Override
+    public Integer findStudentsCount() {
+        return null;
+    }
+
     @Override
     public String send() {
         return "prod";

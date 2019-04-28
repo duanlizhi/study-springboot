@@ -12,5 +12,23 @@ import com.dlz.entity.Student;
  */
 public interface ISomeService {
     String send();
+
+    /**
+     * 添加学生
+     * @param student
+     */
     void addStudent(Student student);
+
+    /**
+     * 查找学生
+     * @param id
+     * @return
+     */
+    Student findStudentById(Integer id);
+
+    /**
+     * 查找学生总人数
+     * @return
+     */
+    Integer findStudentsCount();
 }
